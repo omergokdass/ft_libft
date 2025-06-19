@@ -48,3 +48,21 @@ char	**ft_split(char const *s, char c)
 	str[j] = 0;
 	return (str);
 }
+
+#include <stdio.h>
+int main()
+{
+	char **result;
+	char *s = "Hello World ! 44";
+	char c = ' ';
+	result = ft_split(s, c);
+	int i;
+	i = 0;
+	while (result[i])
+	{
+		printf("%s\n", result[i]);
+		free(result[i]);
+		i++;
+	}
+	free(result);
+}

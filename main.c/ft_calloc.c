@@ -17,3 +17,16 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(p, count * size);
 	return	(p);
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	char *arr = ft_calloc(4,sizeof(char));
+	int i = 0;
+	while (i < 4) 
+	{
+		printf("str[%d] = '%c' (%d)\n", i, arr[i], arr[i]);
+		i++;
+	}
+}
